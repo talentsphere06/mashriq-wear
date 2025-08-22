@@ -1,27 +1,40 @@
+"use client"
+import { client } from '@/sanity/lib/client'
+import { urlFor } from '@/sanity/lib/image'
+import { allProducts } from '@/sanity/lib/queries'
+import { Product } from '@/sanity/lib/type'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ProductsCom = () => {
-    const products = [
-        { id: 1, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 2, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 3, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 4, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 5, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 6, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 7, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 8, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 9, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-        { id: 10, name: 'Flowy Linen Dress', image: '/newArrival/shirt.png' },
-    ]
+  const [products, setProduct] = useState<Product[]>([])
+
+  useEffect(() => {
+    async function fetchProduct() {
+      const fetchedProduct: Product[] = await client.fetch(allProducts)
+      setProduct(fetchedProduct)
+    }
+    fetchProduct()
+  }, [])
+
   return (
-    <div className='grid grid-cols-5 gap-5'>
-            {products.map((items) => (
-                <div key={items.id}>
-                    <Image src={items.image} alt={items.name} width={1000} height={1000} className='w-fit h-fit' ></Image>
-                    <p>{items.name}</p>
-                </div>
-            ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 p-4">
+      {products.map((item) => (
+        <div 
+          key={item._id} 
+          className="flex flex-col items-center rounded-xl overflow-hidden shadow-md bg-white cursor-pointer transform transition duration-300 ease-in-out hover:scale-110 hover:shadow-lg"
+        >
+          <div className="w-full aspect-square relative">
+            <Image
+              src={urlFor(item.image).url()}
+              alt={item.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="p-2 text-center text-lg font-medium">{item.name}</p>
+        </div>
+      ))}
     </div>
   )
 }
