@@ -7,9 +7,9 @@ import { Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 function Header() {
   return (
-    <div className='w-screen h-[65px] border-1 py-3 px-[40px] border-[#E5E8EB]   grid grid-flow-col'>
+    <div className=' h-[65px] border-1 py-3 px-[40px] border-[#E5E8EB]   grid grid-flow-col'>
       {/* logo */}
-      <a className='title place-items-center justify-center grid grid-flow-col gap-2 h-auto     w-fit' href="/">
+      <Link className='title place-items-center justify-center grid grid-flow-col gap-2 h-auto     w-fit' href="/">
         
             <div className="logo h-auto w-[23px] grid-flow-col grid">
                 <Image
@@ -21,7 +21,7 @@ function Header() {
             </div>
             <h1 className='w-[82px] h-[23px] text-[18px] font-bold '>StyleHub</h1>
         
-        </a>
+        </Link>
           {/* menu link for desktop */}
         <div className='hidden md:flex menu w-fill h-auto  grid-flow-col gap-5 place-items-center justify-center place-self-end'>
             <NavigationMenu>
