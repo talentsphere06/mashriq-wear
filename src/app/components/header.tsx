@@ -122,13 +122,13 @@ function Header() {
       {/* menu links for mobile */}
           <div className="md:hidden grid-flow-col flex  place-items-end justify-end  place-content-center">
               
-              <a className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[25px] w-[25px] place-items-center" href="/">
+              <Link className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[25px] w-[25px] place-items-center" href="/">
               <Image
               src="/images/search.png"
               alt='fav'
               width={20}
               height={20}/>
-              </a>
+              </Link>
       
         <Sheet>
           <SheetTrigger>
@@ -173,34 +173,34 @@ function Header() {
                 {/* social link */}
                  <NavigationMenuItem className='grid grid-flow-col'>
                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
-                   <a className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
+                   <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
               <Image
               src="/images/fb.png"
               alt='fav'
               width={20}
               height={20}/>
-              </a>
+              </Link>
                   </NavigationMenuLink>
 
                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
-                   <a className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
+                   <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
               <Image
               src="/images/ins.png"
               alt='fav'
               width={20}
               height={20}/>
-              </a>
+              </Link>
                   </NavigationMenuLink>
 
                   
                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
-                   <a className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
+                   <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
               <Image
               src="/images/linkedin.png"
               alt='fav'
               width={20}
               height={20}/>
-              </a>
+              </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 

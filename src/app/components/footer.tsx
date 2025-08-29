@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
@@ -8,43 +9,43 @@ function Footer() {
         
         {/* Navigation Links */}
         <nav className="flex flex-col md:flex-row md:gap-4 items-center justify-center md:items-start space-y-3">
-          <a
+          <Link
             href="/pages/contact"
             className="text-gray-600 hover:text-black transition-colors"
           >
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="/pages/about"
             className="text-gray-600 hover:text-black transition-colors"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/pages/terms"
             className="text-gray-600 hover:text-black transition-colors"
           >
             Terms & Conditions
-          </a>
-          <a
+          </Link>
+          <Link
             href="/pages/privacy"
             className="text-gray-600 hover:text-black transition-colors"
           >
             Privacy Policy
-          </a>
+          </Link>
         </nav>
 
         {/* Social Media */}
         <div className="flex justify-center gap-6 md:justify-center">
-          <a href="/" aria-label="Facebook" className="hover:opacity-70">
+          <Link href="/" aria-label="Facebook" className="hover:opacity-70">
             <Image src="/images/fb.png" alt="Facebook" width={28} height={28} />
-          </a>
-          <a href="/" aria-label="Instagram" className="hover:opacity-70">
+          </Link>
+          <Link href="/" aria-label="Instagram" className="hover:opacity-70">
             <Image src="/images/ins.png" alt="Instagram" width={28} height={28} />
-          </a>
-          <a href="/" aria-label="LinkedIn" className="hover:opacity-70">
+          </Link>
+          <Link href="/" aria-label="LinkedIn" className="hover:opacity-70">
             <Image src="/images/linkedin.png" alt="LinkedIn" width={28} height={28} />
-          </a>
+          </Link>
         </div>
 
         {/* Copyright */}

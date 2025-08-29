@@ -8,7 +8,6 @@ import { urlFor } from '@/sanity/lib/image'
 import { useRouter } from 'next/navigation'
 // import AuthGuard from '@/components/AuthGuard'
 import { Button } from '@/components/ui/button'
-// import { toast } from 'react-toastify'
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState<Product[]>([])
