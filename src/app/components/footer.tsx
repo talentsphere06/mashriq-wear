@@ -1,57 +1,61 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 function Footer() {
   return (
-   <div className=" overflow-x-hidden">
-  <div className="w-[100%]  border-black border-t-2 justify-center gap-4 py-[40px] px-[20px] grid grid-rows-3">
-    <div>
-      <ul className="pages  grid grid-flow-col">
-        <li>
-          <a className="hover:font-semibold hover:bg-[#EDEDED]" href="/pages/contact">
+    <footer className="w-full border-t border-gray-200 bg-white">
+      <div className="max-w-8xl mx-auto px-6 py-10 grid gap-10">
+        
+        {/* Navigation Links */}
+        <nav className="flex flex-col md:flex-row md:gap-4 items-center justify-center md:items-start space-y-3">
+          <a
+            href="/pages/contact"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
             Contact
           </a>
-        </li>
-        <li>
-          <a className="hover:font-semibold hover:bg-[#EDEDED]" href="/pages/about">
+          <a
+            href="/pages/about"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
             About
           </a>
-        </li>
-        <li>
-          <a className="hover:font-semibold hover:bg-[#EDEDED]" href="/pages/terms">
-            Terms and Conditions
+          <a
+            href="/pages/terms"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
+            Terms & Conditions
           </a>
-        </li>
-        <li>
-          <a className="hover:font-semibold hover:bg-[#EDEDED]" href="/pages/privacy">
+          <a
+            href="/pages/privacy"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
             Privacy Policy
           </a>
-        </li>
-      </ul>
-    </div>
+        </nav>
 
-    <div className="social pages place-items-center gap-6 grid grid-flow-col">
-      {/* Social links */}
-      <a href="/" className="hover:font-semibold hover:bg-[#EDEDED]">
-        <Image src="/images/fb.png" alt="facebook" width={30} height={30} />
-      </a>
-      <a href="/" className="hover:font-semibold hover:bg-[#EDEDED]">
-        <Image src="/images/ins.png" alt="instagram" width={30} height={30} />
-      </a>
-      <a href="/" className="hover:font-semibold hover:bg-[#EDEDED]">
-        <Image src="/images/linkedin.png" alt="linkedin" width={30} height={30} />
-      </a>
-    </div>
+        {/* Social Media */}
+        <div className="flex justify-center gap-6 md:justify-center">
+          <a href="/" aria-label="Facebook" className="hover:opacity-70">
+            <Image src="/images/fb.png" alt="Facebook" width={28} height={28} />
+          </a>
+          <a href="/" aria-label="Instagram" className="hover:opacity-70">
+            <Image src="/images/ins.png" alt="Instagram" width={28} height={28} />
+          </a>
+          <a href="/" aria-label="LinkedIn" className="hover:opacity-70">
+            <Image src="/images/linkedin.png" alt="LinkedIn" width={28} height={28} />
+          </a>
+        </div>
 
-    <div className="text pages place-items-center h-auto w-full grid grid-flow-col">
-      <p className="text-[16px] font-normal text-[#737373]">
-        © 2024 Fashion Forward. All rights reserved.
-      </p>
-    </div>
-  </div>
-</div>
-
-  )
+        {/* Copyright */}
+        <div className="flex items-center justify-center ">
+          <p className="text-sm text-gray-500 text-center md:text-right">
+            © {new Date().getFullYear()} Fashion Forward. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

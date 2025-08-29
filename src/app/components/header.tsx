@@ -27,7 +27,7 @@ function Header() {
             <NavigationMenu>
           <NavigationMenuList className='w-fill h-auto grid grid-flow-col gap-5 place-items-center justify-center place-self-end text-[10px] font-medium '>
             <NavigationMenuItem>
-              <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/newarrivals">New Arrivals</NavigationMenuLink>
+              <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/newArrival">New Arrivals</NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/women">Women</NavigationMenuLink>
