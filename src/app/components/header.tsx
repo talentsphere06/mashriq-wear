@@ -137,7 +137,7 @@ function Header() {
                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="/">Home</NavigationMenuLink>
                 </NavigationMenuItem>
                  <NavigationMenuItem>
-                 <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/newarrivals">New Arrivals</NavigationMenuLink>
+                 <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/newArrival">New Arrivals</NavigationMenuLink>
                 </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/sale">Sale</NavigationMenuLink>
