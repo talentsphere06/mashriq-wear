@@ -80,9 +80,9 @@ const Cart = () => {
       confirmButtonText: "Yes, proceed!"
     }).then((result) => {
       if (result.isConfirmed) {
-        router.push('/checkout')
         setCartItems([])
         Swal.fire("Success", "Your Order has been successfully processed", "success")
+        router.push('/checkout')
       }
     })
   }
@@ -102,7 +102,6 @@ const Cart = () => {
   }
 
   return (
-    // <AuthGuard> {/* </AuthGuard> */}
     <div className="max-w-7xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-8 text-center">Your Shopping Cart</h1>
 
