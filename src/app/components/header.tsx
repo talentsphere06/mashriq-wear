@@ -116,9 +116,9 @@ function Header() {
       {/* menu links for mobile */}
           <div className="md:hidden grid-flow-col flex  place-items-end justify-end  place-content-center">
               
-              <Link className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[25px] w-[25px] place-items-center" href="/">
+              <Link className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[25px] w-[25px] place-items-center mx-2" href="/cart">
               <Image
-              src="/images/search.png"
+              src="/images/cart.png"
               alt='fav'
               width={20}
               height={20}/>
