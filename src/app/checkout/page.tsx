@@ -86,6 +86,7 @@ const Checkout = () => {
 
     try {
       await client.create(orderData);
+      Swal.fire("Success", "Order placed successfully!", "success");
 
       for (const item of cartItems) {
         await updateProductStock(item._id, item.stock);
@@ -94,7 +95,7 @@ const Checkout = () => {
       localStorage.removeItem("appliedDiscount");
       localStorage.removeItem("cart");
       setCartItems([]);
-      Swal.fire("Success", "Order placed successfully!", "success");
+      // Swal.fire("Success", "Order placed successfully!", "success");
     } catch (error) {
       console.error("Error creating order", error);
       Swal.fire("Error", "Failed to place order", "error");
