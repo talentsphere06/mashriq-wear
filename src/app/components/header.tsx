@@ -9,7 +9,7 @@ function Header() {
   return (
     <div className=' h-[65px] border-1 py-3 px-[40px] border-[#E5E8EB]   grid grid-flow-col'>
       {/* logo */}
-      <Link className='title place-items-center justify-center grid grid-flow-col gap-2 h-auto     w-fit' href="/">
+      <Link className='title place-items-center justify-center grid grid-flow-col gap-2 h-auto w-fit' href="/">
         
             <div className="logo h-auto w-[23px] grid-flow-col grid">
                 <Image
@@ -128,7 +128,7 @@ function Header() {
           <SheetTrigger>
             <Menu className="h-6 w-6" />
           </SheetTrigger>
-          <SheetContent side="right" className='w-full items-end text-2xl font-normal'>
+          <SheetContent side="right" className='w-full items-end text-4xl font-medium'>
             <NavigationMenu>
               <NavigationMenuList className="flex flex-col ">
                   

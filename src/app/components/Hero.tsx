@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="relative rounded-3xl overflow-hidden shadow-lg">
 
         <img
-          src="/hero.png" 
+          src="/images/hero.png" 
           alt="Hero"
           className="w-full h-[240px] sm:h-[360px] md:h-[480px] lg:h-[560px] object-cover object-center"
         />
