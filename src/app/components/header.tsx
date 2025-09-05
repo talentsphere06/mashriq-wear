@@ -1,204 +1,270 @@
 
-import { NavigationMenu,NavigationMenuContent,NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuViewport } from '@/components/ui/navigation-menu'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { Menu } from 'lucide-react'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-function Header() {
-  return (
-    <div className=' h-[65px] border-1 py-3 px-[40px] border-[#E5E8EB]   grid grid-flow-col'>
-      {/* logo */}
-      <Link className='title place-items-center justify-center grid grid-flow-col gap-2 h-auto w-fit' href="/">
+// import { NavigationMenu,NavigationMenuContent,NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuViewport } from '@/components/ui/navigation-menu'
+// import Image from 'next/image'
+// import Link from 'next/link'
+// import React from 'react'
+// import { Menu } from 'lucide-react'
+// import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+// function Header() {
+//   return (
+//     <div className=' h-[65px] border-1 py-3 px-[40px] border-[#E5E8EB]   grid grid-flow-col'>
+//       {/* logo */}
+//       <Link className='title place-items-center justify-center grid grid-flow-col gap-2 h-auto w-fit' href="/">
         
-            <div className="logo h-auto w-[23px] grid-flow-col grid">
-                <Image
-                src="/images/logo.png"
-                alt='logo'
-                height={16}
-                width={16}
-                />
-            </div>
-            <h1 className='w-[82px] h-[23px] text-[18px] font-bold '>StyleHub</h1>
+//             <div className="logo h-auto w-[23px] grid-flow-col grid">
+//                 <Image
+//                 src="/images/logo.png"
+//                 alt='logo'
+//                 height={16}
+//                 width={16}
+//                 />
+//             </div>
+//             <h1 className='w-[82px] h-[23px] text-[18px] font-bold '>StyleHub</h1>
         
-        </Link>
-          {/* menu link for desktop */}
-        <div className='hidden md:flex menu w-fill h-auto  grid-flow-col gap-5 place-items-center justify-center place-self-end'>
-            <NavigationMenu>
-          <NavigationMenuList className='w-fill h-auto grid grid-flow-col gap-5 place-items-center justify-center place-self-end text-[10px] font-medium '>
-            <NavigationMenuItem>
-              <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/">Home</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/newArrival">New Arrivals</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/sale">Sale</NavigationMenuLink>
-            </NavigationMenuItem>
-             <NavigationMenuItem>
-              <NavigationMenuLink className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE] h-[40px] w-[40px] px-[8px]"  > 
-               <Image
-              src="/images/fav.png"
-              alt='search'
-              width={40}
-              height={40}/>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[40px] w-[40px] px-[8px]" href="/fav">
+//         </Link>
+//           {/* menu link for desktop */}
+//         <div className='hidden md:flex menu w-fill h-auto  grid-flow-col gap-5 place-items-center justify-center place-self-end'>
+//             <NavigationMenu>
+//           <NavigationMenuList className='w-fill h-auto grid grid-flow-col gap-5 place-items-center justify-center place-self-end text-[10px] font-medium '>
+//             <NavigationMenuItem>
+//               <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/">Home</NavigationMenuLink>
+//             </NavigationMenuItem>
+//             <NavigationMenuItem>
+//               <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/newArrival">New Arrivals</NavigationMenuLink>
+//             </NavigationMenuItem>
+//             <NavigationMenuItem>
+//               <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/sale">Sale</NavigationMenuLink>
+//             </NavigationMenuItem>
+//              <NavigationMenuItem>
+//               <NavigationMenuLink className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE] h-[40px] w-[40px] px-[8px]"  > 
+//                <Image
+//               src="/images/fav.png"
+//               alt='search'
+//               width={40}
+//               height={40}/>
+//               </NavigationMenuLink>
+//             </NavigationMenuItem>
+//             <NavigationMenuItem>
+//               <NavigationMenuLink className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[40px] w-[40px] px-[8px]" href="/fav">
               
-              <Image
-              src="/images/search.png"
-              alt='fav'
-              width={40}
-              height={40}/>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-             <NavigationMenuItem>
-              <NavigationMenuLink className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[40px] w-[40px] px-[8px]" href="/cart">
+//               <Image
+//               src="/images/search.png"
+//               alt='fav'
+//               width={40}
+//               height={40}/>
+//               </NavigationMenuLink>
+//             </NavigationMenuItem>
+//              <NavigationMenuItem>
+//               <NavigationMenuLink className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[40px] w-[40px] px-[8px]" href="/cart">
               
-              <Image
-              src="/images/cart.png"
-              alt='fav'
-              width={40}
-              height={40}/>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-          {/* side dropdown */}
-        <div className='hidden md:flex'>  
-                <NavigationMenu> 
-                    <NavigationMenuList> 
-                        <NavigationMenuItem>
-                        <NavigationMenuTrigger className=' hover:font-semibold hover:bg-[#EDEDED] cursor-pointer'>more</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="p-4 w-48 space-y-2">
-                <li>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="/contact">
-                    Contact
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="/pages/about">
-                    About
-                  </NavigationMenuLink>
-                </li>
-                  <li>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="/pages/terms">
-                    terms and conditions
-                  </NavigationMenuLink>
-                </li>
-                  <li>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="/pages/privacy">
-                    privacy policy
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="Profile">
-                   Profile
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>   
-         </NavigationMenuItem>
-         </NavigationMenuList>   
+//               <Image
+//               src="/images/cart.png"
+//               alt='fav'
+//               width={40}
+//               height={40}/>
+//               </NavigationMenuLink>
+//             </NavigationMenuItem>
+//           </NavigationMenuList>
+//         </NavigationMenu>
+//           {/* side dropdown */}
+//         <div className='hidden md:flex'>  
+//                 <NavigationMenu> 
+//                     <NavigationMenuList> 
+//                         <NavigationMenuItem>
+//                         <NavigationMenuTrigger className=' hover:font-semibold hover:bg-[#EDEDED] cursor-pointer'>more</NavigationMenuTrigger>
+//             <NavigationMenuContent>
+//               <ul className="p-4 w-48 space-y-2">
+//                 <li>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="/contact">
+//                     Contact
+//                   </NavigationMenuLink>
+//                 </li>
+//                 <li>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="/pages/about">
+//                     About
+//                   </NavigationMenuLink>
+//                 </li>
+//                   <li>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="/pages/terms">
+//                     terms and conditions
+//                   </NavigationMenuLink>
+//                 </li>
+//                   <li>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="/pages/privacy">
+//                     privacy policy
+//                   </NavigationMenuLink>
+//                 </li>
+//                 <li>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]' href="Profile">
+//                    Profile
+//                   </NavigationMenuLink>
+//                 </li>
+//               </ul>
+//             </NavigationMenuContent>   
+//          </NavigationMenuItem>
+//          </NavigationMenuList>   
        
       
-        <NavigationMenuViewport />
-      </NavigationMenu>
+//         <NavigationMenuViewport />
+//       </NavigationMenu>
 
-</div>
+// </div>
 
 
-        </div>
+//         </div>
 
-      {/* menu links for mobile */}
-          <div className="md:hidden grid-flow-col flex  place-items-end justify-end  place-content-center">
+//       {/* menu links for mobile */}
+//           <div className="md:hidden grid-flow-col flex  place-items-end justify-end  place-content-center">
               
-              <Link className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[25px] w-[25px] place-items-center mx-2" href="/cart">
-              <Image
-              src="/images/cart.png"
-              alt='fav'
-              width={20}
-              height={20}/>
-              </Link>
+//               <Link className="rounded-2 hover:font-semibold hover:bg-[#EDEDED] bg-[#EDEDDE]  h-[25px] w-[25px] place-items-center mx-2" href="/cart">
+//               <Image
+//               src="/images/cart.png"
+//               alt='fav'
+//               width={20}
+//               height={20}/>
+//               </Link>
       
-        <Sheet>
-          <SheetTrigger>
-            <Menu className="h-6 w-6" />
-          </SheetTrigger>
-          <SheetContent side="right" className='w-full items-end text-2xl font-normal'>
-            <NavigationMenu>
-              <NavigationMenuList className="flex flex-col ">
+//         <Sheet>
+//           <SheetTrigger>
+//             <Menu className="h-6 w-6" />
+//           </SheetTrigger>
+//           <SheetContent side="right" className='w-full items-end text-2xl font-normal'>
+//             <NavigationMenu>
+//               <NavigationMenuList className="flex flex-col ">
                   
 
-                      <NavigationMenuItem>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="/">Home</NavigationMenuLink>
-                </NavigationMenuItem>
-                 <NavigationMenuItem>
-                 <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/newArrival">New Arrivals</NavigationMenuLink>
-                </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/sale">Sale</NavigationMenuLink>
-            </NavigationMenuItem>
-             <NavigationMenuItem>
-              <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/fav">fav</NavigationMenuLink>
-            </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="./pages/about">About</NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="/pages/services">Services</NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="/pages/contact">Contact</NavigationMenuLink>
-                </NavigationMenuItem>
+//                       <NavigationMenuItem>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="/">Home</NavigationMenuLink>
+//                 </NavigationMenuItem>
+//                  <NavigationMenuItem>
+//                  <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/newArrival">New Arrivals</NavigationMenuLink>
+//                 </NavigationMenuItem>
+//             <NavigationMenuItem>
+//               <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/sale">Sale</NavigationMenuLink>
+//             </NavigationMenuItem>
+//              <NavigationMenuItem>
+//               <NavigationMenuLink  className='hover:font-semibold hover:bg-[#EDEDED]' href="/fav">fav</NavigationMenuLink>
+//             </NavigationMenuItem>
+//                 <NavigationMenuItem>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="./pages/about">About</NavigationMenuLink>
+//                 </NavigationMenuItem>
+//                 <NavigationMenuItem>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="/pages/services">Services</NavigationMenuLink>
+//                 </NavigationMenuItem>
+//                 <NavigationMenuItem>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  href="/pages/contact">Contact</NavigationMenuLink>
+//                 </NavigationMenuItem>
                 
-                {/* social link */}
-                 <NavigationMenuItem className='grid grid-flow-col'>
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
-                   <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
-              <Image
-              src="/images/fb.png"
-              alt='fav'
-              width={20}
-              height={20}/>
-              </Link>
-                  </NavigationMenuLink>
+//                 {/* social link */}
+//                  <NavigationMenuItem className='grid grid-flow-col'>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
+//                    <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
+//               <Image
+//               src="/images/fb.png"
+//               alt='fav'
+//               width={20}
+//               height={20}/>
+//               </Link>
+//                   </NavigationMenuLink>
 
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
-                   <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
-              <Image
-              src="/images/ins.png"
-              alt='fav'
-              width={20}
-              height={20}/>
-              </Link>
-                  </NavigationMenuLink>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
+//                    <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
+//               <Image
+//               src="/images/ins.png"
+//               alt='fav'
+//               width={20}
+//               height={20}/>
+//               </Link>
+//                   </NavigationMenuLink>
 
                   
-                  <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
-                   <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
-              <Image
-              src="/images/linkedin.png"
-              alt='fav'
-              width={20}
-              height={20}/>
-              </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
+//                   <NavigationMenuLink className='hover:font-semibold hover:bg-[#EDEDED]'  >
+//                    <Link className="rounded-2 hover:font-semibold h-[25px] w-[25px] place-items-center" href="/">
+//               <Image
+//               src="/images/linkedin.png"
+//               alt='fav'
+//               width={20}
+//               height={20}/>
+//               </Link>
+//                   </NavigationMenuLink>
+//                 </NavigationMenuItem>
 
 
 
-              </NavigationMenuList>
-            </NavigationMenu>
-          </SheetContent>
-        </Sheet>
+//               </NavigationMenuList>
+//             </NavigationMenu>
+//           </SheetContent>
+//         </Sheet>
+//       </div>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {isOpen && (
+//         <div className="md:hidden bg-white shadow-lg">
+//           <div className="px-4 py-4 space-y-2 flex flex-col">
+//             <Link href="/" className="hover:text-gray-600">Home</Link>
+//             <Link href="/newArrival" className="hover:text-gray-600">New Arrivals</Link>
+//             <Link href="/sale" className="hover:text-gray-600">Sale</Link>
+//             <Link href="/pages/about" className="hover:text-gray-600">About</Link>
+//             <Link href="/contact" className="hover:text-gray-600">Contact</Link>
+//             <button className="flex items-center space-x-2 hover:text-gray-600">
+//               <Search className="h-5 w-5" /> <span>Search</span>
+//             </button>
+//             <Link href={'/cart'} className="flex items-center space-x-2 hover:text-gray-600 ">
+//               <ShoppingCart className="h-5 w-5 cursor-pointer" /> <span>Cart</span>
+//             </Link>
+//           </div>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// }
+
+
+
+"use client"
+
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X, Search, ShoppingCart } from "lucide-react";
+
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="bg-white shadow-md  w-full py-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          <div className="flex-shrink-0 text-2xl font-bold text-gray-800">
+            <Link href="/">Style Hub</Link>
+          </div>
+
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link href="/" className="hover:text-gray-600">Home</Link>
+            <Link href="/newArrival" className="hover:text-gray-600">New Arrivals</Link>
+            <Link href="/sale" className="hover:text-gray-600">Sale</Link>
+            <Link href="/pages/about" className="hover:text-gray-600">About</Link>
+            <Link href="/contact" className="hover:text-gray-600">Contact</Link>
+
+            <button className="hover:text-gray-600">
+              <Search className="h-5 w-5" />
+            </button>
+            <Link href={'/cart'} className="hover:text-gray-600 cursor-pointer">
+              <ShoppingCart className="h-5 w-5" />
+            </Link>
+          </div>
+
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-800 hover:text-gray-600"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
       </div>
-      </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-4 py-4 space-y-2 flex flex-col">
@@ -219,3 +285,4 @@ function Header() {
     </nav>
   );
 }
+ 

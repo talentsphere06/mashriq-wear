@@ -26,7 +26,7 @@ const ProductsCom = () => {
 
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 p-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 p-4 my-10">
       {products.map((item: Product) => (
         <Link href={`/product/${item.slug.current}`}
           key={item._id} 
