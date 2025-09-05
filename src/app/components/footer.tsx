@@ -10,7 +10,7 @@ function Footer() {
         {/* Navigation Links */}
         <nav className="flex flex-col md:flex-row md:gap-4 items-center justify-center md:items-start space-y-3">
           <Link
-            href="/pages/contact"
+            href="/contact"
             className="text-gray-600 hover:text-black transition-colors"
           >
             Contact

@@ -67,6 +67,11 @@ export const Products = {
       "type": "number"
     },
     {
+      "name": "category",
+      "title": "Category",
+      "type": "string",
+    },
+    {
       "name": "fabric",
       "title": "Fabric",
       "type": "string"

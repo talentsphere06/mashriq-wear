@@ -1,7 +1,3 @@
-import { Layout } from "lucide-react";
-import { title } from "process";
-
-
 export default {
     name: 'order',
     title: 'Order',
@@ -53,7 +49,6 @@ export default {
             title: 'Discount',
             type: 'number'
         },
-        // orderDate: new Date().toISOString(),
         {
             name: 'orderDate',
             title: 'Order Date',
