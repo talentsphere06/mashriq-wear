@@ -14,7 +14,7 @@ type ProductPageProps = {
 };
 
 // Fetch product details
-export const getProduct = async (slug: string): Promise<Product> => {
+const getProduct = async (slug: string): Promise<Product> => {
   return await client.fetch(
     groq`*[_type == "product" && slug.current == $slug][0]{
       _id,
