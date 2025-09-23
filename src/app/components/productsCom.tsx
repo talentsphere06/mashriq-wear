@@ -30,19 +30,3 @@ const ProductsCom = () => {
 }
 
 export default ProductsCom
-
-
-        // <Link href={`/product/${item.slug.current}`}
-        //   key={item._id} 
-        //   className="flex flex-col items-center rounded-xl overflow-hidden shadow-md bg-white cursor-pointer transform transition duration-300 ease-in-out hover:scale-110 hover:shadow-lg"
-        // >
-        //   <div className="w-full aspect-square relative">
-        //     {item.variants[0].images[0] && ( <Image
-        //       src={urlFor(item.variants[0].images[0]).url()}
-        //       alt={item.name}
-        //       fill
-        //       className="object-cover"
-        //     />)}
-        //   </div>
-        //   <p className="p-2 text-center text-lg font-medium">{item.name}</p>
-        // </Link>

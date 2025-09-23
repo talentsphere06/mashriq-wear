@@ -1,4 +1,4 @@
-import { SignedIn, SignedOut, SignInButton, SignOutButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 import { Eye } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -42,9 +42,6 @@ const Signin = () => {
         </form>
         <div className='text-center bg-red-500 text-white py-3 rounded-lg cursor-pointer hover:bg-red-600'>
                 <SignInButton mode='modal'/>
-                {/* <SignedIn>
-                    <SignOutButton/>
-                </SignedIn> */}
             </div>
         <p className='text-center mt-4 text-gray-600'>
             New here? <Link href={'#'} className='text-red-500 font-bold'>Create an account</Link>

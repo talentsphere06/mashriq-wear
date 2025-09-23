@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import { Category, Product} from "@/sanity/lib/type";
+import { Product} from "@/sanity/lib/type";
 import Link from "next/link";
 
 
