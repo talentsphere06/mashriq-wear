@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Category from "./components/category";
 import Hero from "./components/Hero";
 import ProductsCom from "./components/productsCom";
+import Category from "./components/category";
 
 export default function Home() {
   return (

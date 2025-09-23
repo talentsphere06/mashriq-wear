@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ProductCard from "@/app/components/productCard";
+import ProductCard from "@/app/components/categoryCard";
 import { Category } from "@/sanity/lib/type";
 import { client } from "@/sanity/lib/client";
-import { categoryPro } from "@/sanity/lib/queries";
 import { groq } from "next-sanity";
 
 type ProductPageProps = {
@@ -18,7 +17,9 @@ return await client.fetch(
     _id,
     name,
     slug,
-    image,
+    variants[]{
+      images[]
+    },
     category
   }`,
   { slug }
@@ -40,21 +41,20 @@ const CategoryDetails = ({params}: ProductPageProps) => {
     getProducts()
   }, [params])
 
-  const [products, setProducts] = useState<Category[]>([]);
-  useEffect(() => {
-    async function fetchProduct() {
-      try {
-        const fetchedData = await client.fetch(categoryPro);
-        const formatted = Object.values(fetchedData).filter(Boolean) as Category[];
-        setProducts(formatted);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    }
-    fetchProduct();
-  }, [])
+  // const [products, setProducts] = useState<Category[]>([]);
+  // useEffect(() => {
+  //   async function fetchProduct() {
+  //     try {
+  //       const fetchedData = await client.fetch(categoryPro);
+  //       const formatted = Object.values(fetchedData).filter(Boolean) as Category[];
+  //       setProducts(formatted);
+  //     } catch (error) {
+  //       console.error("Error fetching products:", error);
+  //     }
+  //   }
+  //   fetchProduct();
+  // }, [])
 
-  // Use products directly since they're already filtered by category
   const filteredProducts = prod || [];
 
   return (

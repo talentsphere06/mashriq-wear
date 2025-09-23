@@ -5,15 +5,15 @@ import Link from "next/link";
 import { urlFor } from "@/sanity/lib/image";
 import { Category} from "@/sanity/lib/type";
 
-const CategoryCom: React.FC<Category> = ({ name, slug, image}) => {
+const CategoryCom: React.FC<Category> = ({ name, slug, variants}) => {
   return (
     <Link href={`/categories/${slug.current}`} key={slug.current}>
       <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group cursor-pointer">
         {/* Image */}
         <div className="relative h-36 sm:h-48 lg:h-64 w-full">
-          {image ? (
+          {variants[0].images[0] ? (
             <Image
-              src={urlFor(image).url()}
+              src={urlFor(variants[0].images[0]).url()}
               alt={name}
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-700"

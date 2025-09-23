@@ -117,7 +117,7 @@ const Checkout = () => {
             >
               <div className="flex items-center gap-3">
                 <Image
-                  src={urlFor(item.image).url()}
+                  src={urlFor(item.variants[0].images[0]).url()}
                   alt={item.name}
                   width={60}
                   height={60}

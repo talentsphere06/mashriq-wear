@@ -1,8 +1,24 @@
-
-import React from "react"
-import ProductsCom from "./productsCom"
+"use client"
+import React, { useEffect, useState } from "react"
+import { Product } from "@/sanity/lib/type"
+import { client } from "@/sanity/lib/client"
+import { allProducts } from "@/sanity/lib/queries"
+import ProCard from "./productCard"
 
 const NewArrival = () => {
+  const [products, setProduct] = useState<Product[]>([])
+
+  useEffect(() => {
+    async function fetchProduct() {
+      try {
+        const fetchedProduct: Product[] = await client.fetch(allProducts)
+        setProduct(fetchedProduct)
+      } catch (error) {
+        console.error("Error fetching products:", error)
+      }
+    }
+    fetchProduct()
+  }, [])
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 my-20 space-y-10">
       {/* Section Heading */}
@@ -40,7 +56,12 @@ const NewArrival = () => {
       </div>
 
       {/* Products Grid */}
-      <ProductsCom />
+      {/* <ProductsCom /> */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 p-4 my-10 px-8">
+      {products.map((item: Product) => (
+        <ProCard key={item._id} {...item}/>
+      ))}
+    </div>
     </section>
   )
 }

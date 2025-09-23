@@ -2,11 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import { Category, Product} from "@/sanity/lib/type";
+import { Category} from "@/sanity/lib/type";
 import Link from "next/link";
 
 
-const ProCard: React.FC<Product> = ({name, variants, slug }) => {
+const ProductCard: React.FC<Category> = ({name, variants, slug }) => {
   return (
     <Link href={`/product/${slug.current}`} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group">
       {/* Image */}
@@ -35,4 +35,4 @@ const ProCard: React.FC<Product> = ({name, variants, slug }) => {
   );
 };
 
-export default ProCard;
+export default ProductCard;
