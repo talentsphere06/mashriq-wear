@@ -115,7 +115,7 @@ const ProductCart = ({ params }: ProductPageProps) => {
       <div className="w-full lg:w-1/2 flex flex-col gap-6">
         <h2 className="text-3xl font-semibold">{product.name}</h2>
         <p className="text-gray-600">{product.description}</p>
-        <p className="text-2xl font-bold">${product.price}</p>
+        <p className="text-2xl font-bold">USD.{product.price}</p>
 
         {/* Colors */}
         <div>

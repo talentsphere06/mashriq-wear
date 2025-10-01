@@ -93,7 +93,7 @@ const Cart = () => {
       setIsDiscountApplied(true)
       setDiscount(50)
       localStorage.setItem('appliedDiscount', '50')
-      Swal.fire("Success", "$50 discount applied!", "success")
+      Swal.fire("Success", "Rs 50 discount applied!", "success")
     } else {
       setIsDiscountApplied(false)
       setDiscount(0)
@@ -126,7 +126,7 @@ const Cart = () => {
                     />
                     <div>
                       <h2 className="font-semibold text-lg">{item.name}</h2>
-                      <p className="text-gray-500">${item.price}</p>
+                      <p className="text-gray-500">USD {item.price}</p>
                     </div>
                   </div>
 
@@ -161,7 +161,7 @@ const Cart = () => {
               </div>
               <div className="flex justify-between mb-4">
                 <span>Sub Total:</span>
-                <span className="font-semibold">${cartItems.reduce((total, item) => total + item.price * item.stock, 0).toFixed(2)}</span>
+                <span className="font-semibold">Rs {cartItems.reduce((total, item) => total + item.price * item.stock, 0).toFixed(2)}</span>
               </div>
               <div className="mb-4 flex gap-3">
                 <input
@@ -174,11 +174,11 @@ const Cart = () => {
                 <Button className='bg-blue-500 cursor-pointer' onClick={handleDiscountCode}>Apply Coupon</Button>
               </div>
                 {isDiscountApplied && (
-                  <p className="text-green-600 text-md">${discount} discount applied!</p>
+                  <p className="text-green-600 text-md">Rs {discount} discount applied!</p>
                 )}
               <div className="flex justify-between mb-4 mt-4">
                 <span>Total:</span>
-                <span className="font-semibold">${calculatedTotal().toFixed(2)}</span>
+                <span className="font-semibold">Rs {calculatedTotal().toFixed(2)}</span>
               </div>
               <button
                 onClick={handleProcessing}
