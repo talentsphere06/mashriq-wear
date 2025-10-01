@@ -4,7 +4,6 @@ import { getCartItems } from "../actions/actions";
 import { Product } from "@/sanity/lib/type";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import { Button } from "@/components/ui/button";
 import Swal from "sweetalert2";
 import { client } from "@/sanity/lib/client";
 import { ChevronRight } from "lucide-react";

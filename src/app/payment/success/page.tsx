@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 
 export default function PaymentSuccess() {
   const searchParams = useSearchParams();
-  const [paymentIntent, setPaymentIntent] = useState<any>(null);
+  const [paymentIntent, setPaymentIntent] = useState<{ id: string } | null>(null);
 
   useEffect(() => {
     const paymentIntentId = searchParams.get('payment_intent');

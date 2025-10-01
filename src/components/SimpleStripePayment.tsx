@@ -36,18 +36,18 @@ function PaymentForm({ amount, onPaymentSuccessAction }: { amount: number; onPay
         body: JSON.stringify({ amount }),
       });
 
-      const { clientSecret } = await response.json();
+  await response.json();
 
       // Confirm payment
-      const { error } = await stripe.confirmPayment({
+      const paymentResult = await stripe.confirmPayment({
         elements,
         confirmParams: {
           return_url: `${window.location.origin}/payment/success`,
         },
       });
 
-      if (error) {
-        alert('Payment failed: ' + error.message);
+      if (paymentResult.error) {
+        alert('Payment failed: ' + paymentResult.error.message);
       } else {
         // Payment successful - clear cart immediately
         localStorage.removeItem('cart');
