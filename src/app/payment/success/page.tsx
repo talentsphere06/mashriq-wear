@@ -44,3 +44,4 @@ function PaymentSuccessContent() {
     </div>
   );
 }
+export default PaymentSuccessContent
