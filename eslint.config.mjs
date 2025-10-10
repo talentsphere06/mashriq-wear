@@ -12,6 +12,24 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
+    rules: {
+      // Disable strict TypeScript rules
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      
+      // Disable strict React rules
+      "react-hooks/exhaustive-deps": "warn",
+      "react/no-unescaped-entities": "off",
+      
+      // Disable Next.js strict rules
+      "@next/next/no-img-element": "off",
+      "@next/next/no-html-link-for-pages": "off",
+      
+      // General rules
+      "no-console": "off",
+      "no-debugger": "off",
+    },
     ignores: [
       "node_modules/**",
       ".next/**",

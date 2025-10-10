@@ -91,7 +91,7 @@ const Page = () => {
 
     // For COD, validate shipping form
     if (paymentMethod === 'cod') {
-      if (!validateForm()) return
+    if (!validateForm()) return
     }
 
     const orderData = {
@@ -231,7 +231,7 @@ const Page = () => {
                   onChange={(e) => setPaymentMethod(e.target.value as 'cod')}
                   className="w-4 h-4"
                 />
-                <div>
+          <div>
                   <span className="font-medium">Cash on Delivery</span>
                   <p className="text-sm text-gray-600">Pay when you receive your order</p>
                 </div>
@@ -242,29 +242,29 @@ const Page = () => {
             {paymentMethod === 'cod' && (
               <div className="mb-6 border-1 border-black rounded-2xl p-4">
                 <h3 className="text-xl font-semibold mb-4">Shipping Information</h3>
-                <div className="space-y-4">
-                  {Object.entries(formValues).map(([key, value]) => (
-                    <div key={key}>
-                      <input
-                        id={key}
-                        type="text"
-                        placeholder={key.replace(/([A-Z])/g, ' $1')}
-                        value={value}
-                        onChange={handleInputChange}
-                        className={`w-full px-4 py-2 border rounded ${
-                          formErrors[key as keyof typeof formErrors]
-                            ? 'border-red-500'
-                            : 'border-gray-300'
-                        }`}
-                      />
-                      {formErrors[key as keyof typeof formErrors] && (
-                        <p className="text-red-500 text-sm mt-1">
-                          This field is required.
-                        </p>
-                      )}
-                    </div>
-                  ))}
+            <div className="space-y-4">
+              {Object.entries(formValues).map(([key, value]) => (
+                <div key={key}>
+                  <input
+                    id={key}
+                    type="text"
+                    placeholder={key.replace(/([A-Z])/g, ' $1')}
+                    value={value}
+                    onChange={handleInputChange}
+                    className={`w-full px-4 py-2 border rounded ${
+                      formErrors[key as keyof typeof formErrors]
+                        ? 'border-red-500'
+                        : 'border-gray-300'
+                    }`}
+                  />
+                  {formErrors[key as keyof typeof formErrors] && (
+                    <p className="text-red-500 text-sm mt-1">
+                      This field is required.
+                    </p>
+                  )}
                 </div>
+              ))}
+            </div>
               </div>
             )}
 
@@ -293,11 +293,11 @@ const Page = () => {
                 )}
               </div>
             ) : (
-              <button
-                onClick={handlePlaceOrder}
+            <button
+              onClick={handlePlaceOrder}
                 className="w-full bg-green-600 cursor-pointer hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg">
                 Place Order (Cash on Delivery) - Rs {total.toFixed(2)}
-              </button>
+            </button>
             )}
           </div>
         </div>
@@ -307,4 +307,5 @@ const Page = () => {
 }
 
 export default Page
+
 
