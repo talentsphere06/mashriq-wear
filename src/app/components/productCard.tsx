@@ -6,7 +6,7 @@ import { Product} from "@/sanity/lib/type";
 import Link from "next/link";
 
 
-const ProCard: React.FC<Product> = ({name, variants, slug }) => {
+const ProCard: React.FC<Product> = ({name,price, variants, slug }) => {
   return (
     <Link href={`/product/${slug.current}`} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group">
       {/* Image */}
@@ -30,6 +30,9 @@ const ProCard: React.FC<Product> = ({name, variants, slug }) => {
         <h2 className="text-base sm:text-lg font-semibold text-gray-800 line-clamp-1">
           {name}
         </h2>
+        <h3 className="text-base sm:lg font-semibold text-gray-800 line-clamp-1">
+        {price} 
+        </h3>
       </div>
     </Link>
   );

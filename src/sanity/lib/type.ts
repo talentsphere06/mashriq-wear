@@ -18,6 +18,12 @@
 // } 
 
 export interface Product {
+  image: {
+    asset: {
+      _ref: string;
+      _type: "image";
+    };
+  };
   _id: string;
   name: string;
   slug: {
