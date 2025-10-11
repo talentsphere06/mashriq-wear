@@ -1,4 +1,4 @@
-// TODO --------------------------------------------------------------
+
 "use client"
 import { addToCart } from "@/app/actions/actions";
 import { client } from "@/sanity/lib/client";
@@ -13,7 +13,6 @@ type ProductPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-// Fetch product details
 const getProduct = async (slug: string): Promise<Product> => {
   return await client.fetch(
     groq`*[_type == "product" && slug.current == $slug][0]{
@@ -43,7 +42,6 @@ const ProductCart = ({ params }: ProductPageProps) => {
       const productData = await getProduct(slug);
       setProduct(productData);
 
-      // default: pick first color + first image
       if (productData?.variants?.length > 0) {
         setSelectedColor(productData.variants[0].color);
         const firstImg = urlFor(productData.variants[0].images[0]).url();
@@ -70,9 +68,9 @@ const ProductCart = ({ params }: ProductPageProps) => {
 
   return (
     <div className="max-w-6xl mx-auto my-20 px-4 flex flex-col lg:flex-row gap-12">
-      {/* Left side - Images */}
+
       <div className="w-full lg:w-1/2 flex flex-col items-center">
-        {/* Main Image */}
+
         {selectedImage && (
           <div className="w-full aspect-square relative rounded-xl overflow-hidden shadow-md">
             <Image
@@ -85,7 +83,6 @@ const ProductCart = ({ params }: ProductPageProps) => {
           </div>
         )}
 
-        {/* Thumbnails */}
         <div className="mt-6 grid grid-cols-4 sm:grid-cols-5 gap-3 w-full">
           {activeVariant.images.map((img, i) => {
             const imgUrl = urlFor(img).url();
@@ -110,14 +107,11 @@ const ProductCart = ({ params }: ProductPageProps) => {
           })}
         </div>
       </div>
-
-      {/* Right side - Info */}
       <div className="w-full lg:w-1/2 flex flex-col gap-6">
         <h2 className="text-3xl font-semibold">{product.name}</h2>
         <p className="text-gray-600">{product.description}</p>
         <p className="text-2xl font-bold">${product.price}</p>
 
-        {/* Colors */}
         <div>
           <h3 className="font-medium mb-2">Color</h3>
           <div className="flex gap-3">
@@ -141,7 +135,6 @@ const ProductCart = ({ params }: ProductPageProps) => {
           </div>
         </div>
 
-        {/* Add to Cart */}
         <button
           onClick={(e) => handleAddToCart(e, product)}
           className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition shadow-md cursor-pointer"
