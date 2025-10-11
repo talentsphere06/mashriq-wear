@@ -55,6 +55,7 @@ function PaymentForm({ amount, onPaymentSuccessAction }: { amount: number; onPay
         onPaymentSuccessAction?.();
       }
     } catch (error) {
+      console.log(error)
       alert('Payment error occurred');
     } finally {
       setIsLoading(false);
